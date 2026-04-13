@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchFound | Beta Portal</title>
+    <style>
+        body { background: #0b0b0b; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .phone-frame { width: 350px; height: 600px; border: 8px solid #333; border-radius: 40px; overflow: hidden; position: relative; background: #1a1a1a; box-shadow: 0 0 50px rgba(255, 0, 150, 0.2); }
+        .header { padding: 20px; text-align: center; font-weight: bold; border-bottom: 1px solid #333; color: #ff007f; }
+        .photo-container { width: 100%; height: 70%; overflow: hidden; }
+        .photo-container img { width: 100%; height: 100%; object-fit: cover; }
+        .info { padding: 15px; }
+        .name { font-size: 24px; font-weight: bold; }
+        .status { color: #00ff00; font-size: 12px; margin-top: 5px; }
+        .buttons { position: absolute; bottom: 20px; width: 100%; display: flex; justify-content: space-around; }
+        .btn { width: 60px; height: 60px; border-radius: 50%; border: none; font-size: 20px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .no { background: #444; color: white; }
+        .yes { background: #ff007f; color: white; }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="header">NEW MATCH NEAR YOU</div>
+        <div class="photo-container">
+            <img src="profile.jpg" alt="Profile">
+        </div>
+        <div class="info">
+            <div class="name">Candidate #8293</div>
+            <div class="status">● ONLINE - 2km away</div>
+            <p style="font-size: 14px; color: #aaa;">"Looking for real connections only. No games."</p>
+        </div>
+        <div class="buttons">
+            <button class="btn no">✖</button>
+            <button class="btn yes">❤</button>
+        </div>
+    </div>
+</body>
+</html>
+
