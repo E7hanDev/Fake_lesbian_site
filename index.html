@@ -34,7 +34,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 5%;
-            background: rgba(11, 15, 25, 0.9);
+            background: rgba(11, 15, 25, 0.95);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
@@ -71,6 +71,361 @@
 
         /* Hero Section */
         .hero {
-            min-height: 80vh;
+            min-height: 75vh;
             display: flex;
-            flex
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            /* Sleek dark gradient background so it doesn't need external images */
+            background: radial-gradient(circle at center, #1E293B 0%, var(--bg-main) 70%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--accent-gold), #B8860B);
+            color: #000;
+            padding: 16px 40px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: 0.3s all ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Live Inventory Section */
+        .inventory {
+            padding: 80px 5%;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-size: 1rem;
+        }
+
+        .section-title span {
+            color: var(--accent-gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .car-card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s all ease;
+        }
+
+        .car-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Luxury CSS Placeholder for Car Images */
+        .car-img-placeholder {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #1E293B, #0F172A);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .car-img-placeholder svg {
+            width: 50px;
+            height: 50px;
+            fill: var(--accent-gold);
+            opacity: 0.6;
+            margin-bottom: 10px;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(11, 15, 25, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .car-info {
+            padding: 25px;
+        }
+
+        .car-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .specs-strip {
+            display: flex;
+            gap: 15px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 15px;
+        }
+
+        .price-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .duty-tag {
+            font-size: 0.75rem;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            font-weight: 600;
+        }
+
+        /* Sourcing Form Section */
+        .sourcing {
+            padding: 80px 5%;
+            background-color: #0E1422;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 14px;
+            background: var(--bg-main);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: var(--text-light);
+            outline: none;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--accent-gold), #B8860B);
+            color: #000;
+            border: none;
+            padding: 16px;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s all ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: var(--bg-main);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hero h1 { font-size: 2.3rem; }
+            .hero p { font-size: 1rem; }
+            .form-container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">APEX<span>IMPORTS</span></div>
+        <ul>
+            <li><a href="#inventory">Live Stock</a></li>
+            <li><a href="#sourcing">Custom Order</a></li>
+            <li><a href="#about">Process</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Direct Car Importing,<br>Delivered to Malawi.</h1>
+        <p>Skip the luxury markups. We source clean Japanese & UK auction units, manage ocean freight directly via Dar es Salaam, and handle full MRA customs port clearance.</p>
+        <a href="#sourcing" class="cta-btn">Start Sourcing Manifest</a>
+    </section>
+
+    <section class="inventory" id="inventory">
+        <h2 class="section-title">In Transit & <span>Available Units</span></h2>
+        <p class="section-subtitle">Real-time tracking available on verified luxury assets</p>
+        
+        <div class="grid">
+            
+            <div class="car-card">
+                <div class="car-img-placeholder">
+                    <span class="status-badge" style="color: #4ADE80;">DAR ES SALAAM PORT</span>
+                    <svg viewBox="0 0 24 24"><path d="M18.92 11c-.08-.26-.31-.44-.59-.44h-12.66c-.28 0-.51.18-.59.44L3.62 15.5c-.12.4-.02.83.26 1.13.12.12.28.2.46.24v3.13c0 .55.45 1 1 1h1c.55 0 1-.45 1-1V19h10v1.5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-3.13c.18-.04.34-.12.46-.24.28-.3.38-.73.26-1.13L18.92 11M6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16m11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M5 10l1.5-4.5h11L19 10H5z"/></svg>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">BMW 4 SERIES GRAN COUPE</span>
+                </div>
+                <div class="car-info">
+                    <h3>2016 BMW 428i M Sport</h3>
+                    <div class="specs-strip">
+                        <span>64,000 km</span> | <span>Steptronic</span> | <span>2.0L Turbo</span>
+                    </div>
+                    <div class="price-box">
+                        <div class="price">MK 41,500,000</div>
+                        <div class="duty-tag">Duty Paid</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-img-placeholder">
+                    <span class="status-badge" style="color: var(--accent-blue);">OCEAN FREIGHT</span>
+                    <svg viewBox="0 0 24 24"><path d="M18.92 11c-.08-.26-.31-.44-.59-.44h-12.66c-.28 0-.51.18-.59.44L3.62 15.5c-.12.4-.02.83.26 1.13.12.12.28.2.46.24v3.13c0 .55.45 1 1 1h1c.55 0 1-.45 1-1V19h10v1.5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-3.13c.18-.04.34-.12.46-.24.28-.3.38-.73.26-1.13L18.92 11M6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16m11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M5 10l1.5-4.5h11L19 10H5z"/></svg>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">MERCEDES BENZ C-CLASS</span>
+                </div>
+                <div class="car-info">
+                    <h3>2015 Mercedes C200 AMG Line</h3>
+                    <div class="specs-strip">
+                        <span>71,000 km</span> | <span>7G-Tronic</span> | <span>BlueEfficiency</span>
+                    </div>
+                    <div class="price-box">
+                        <div class="price">MK 39,000,000</div>
+                        <div class="duty-tag">Duty Paid</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-img-placeholder">
+                    <span class="status-badge" style="color: #FBBF24;">JAPAN AUCTION CLEARED</span>
+                    <svg viewBox="0 0 24 24"><path d="M18.92 11c-.08-.26-.31-.44-.59-.44h-12.66c-.28 0-.51.18-.59.44L3.62 15.5c-.12.4-.02.83.26 1.13.12.12.28.2.46.24v3.13c0 .55.45 1 1 1h1c.55 0 1-.45 1-1V19h10v1.5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-3.13c.18-.04.34-.12.46-.24.28-.3.38-.73.26-1.13L18.92 11M6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16m11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M5 10l1.5-4.5h11L19 10H5z"/></svg>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">TOYOTA PRADO TX-L</span>
+                </div>
+                <div class="car-info">
+                    <h3>2017 Toyota Land Cruiser Prado</h3>
+                    <div class="specs-strip">
+                        <span>89,000 km</span> | <span>Automatic</span> | <span>3.0L Diesel</span>
+                    </div>
+                    <div class="price-box">
+                        <div class="price">MK 82,000,000</div>
+                        <div class="duty-tag" style="color:#FBBF24; background:rgba(251,191,36,0.1); border-color:rgba(251,191,36,0.2);">Est. Landed</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sourcing" id="sourcing">
+        <h2 class="section-title">Can't Find Your Spec? <span>Custom Sourcing</span></h2>
+        <div class="form-container">
+            <form action="#" onsubmit="event.preventDefault(); alert('Sourcing order initiated. System connected via Infinity Websites.');">
+                <div class="form-group">
+                    <label for="make">Vehicle Year, Make & Model Variant</label>
+                    <input type="text" id="make" placeholder="e.g., 2016 BMW 428i Gran Coupe M Sport" required>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Total Target Allocation Budget (MWK)</label>
+                    <input type="text" id="budget" placeholder="e.g., MK 40,000,000" required>
+                </div>
+                <div class="form-group">
+                    <label for="source">Logistics Route Allocation</label>
+                    <select id="source">
+                        <option value="japan">USS Tokyo / USS Yokohama Auctions (JDM)</option>
+                        <option value="uk">United Kingdom Port Logistics (UK Spec)</option>
+                        <option value="sa">South Africa Durban Transit</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit Sourcing Specification</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Apex Imports MW. Luxury platforms engineered by Infinity Websites.</p>
+    </footer>
+
+</body>
+</html>
